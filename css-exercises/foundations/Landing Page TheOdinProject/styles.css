@@ -4,18 +4,16 @@ body {
     font-family: 'Roboto-Regular', sans-serif;
 }
 
-header {
+header, ul, .First, .imgsAndTxts, .blueBox {
     display: flex;
+}
+
+header {
     background-color: #1f2937;
 }
 
 header p {
-    color: #f9faf8;
     font-size: 24px;
-}
-
-ul {
-    display: flex;
 }
 
 a {
@@ -23,12 +21,7 @@ a {
 }
 
 .First {
-    display: flex;
     background-color: #1f2937;
-}
-
-.First h1, .First p {
-    color: #f9faf8;
 }
 
 .First h1 {
@@ -38,18 +31,15 @@ a {
 
 .First p, header a {
     font-size: 18px;
-    color: #e5e7eb;
 }
 
 button {
     background-color: #3882f6;
-    color: #f9faf8;
     border-radius: 10px;
 }
 
 .imgPlaceholder {
     background-color: #6d747d;
-    color: #e5e7eb;
 }
 
 .Second h2 {
@@ -82,12 +72,7 @@ button {
 }
 
 .blueBox {
-    display: flex;
     background-color: #3882f6;
-}
-
-.FthText p {
-    color: #e5e7eb;
 }
 
 .Fourth button {
@@ -97,5 +82,12 @@ button {
 
 footer {
     background-color: #1f2937;
+}
+
+header p, .First h1, .First p, button {
+    color: #f9faf8;
+}
+
+.First p, header a, .imgPlaceholder, footer{
     color: #e5e7eb;
 }
