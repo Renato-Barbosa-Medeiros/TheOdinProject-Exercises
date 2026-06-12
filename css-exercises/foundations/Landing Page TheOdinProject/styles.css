@@ -1,0 +1,99 @@
+body {
+    
+}
+
+header {
+    display: flex;
+    background-color: #1f2937;
+}
+
+header p {
+    color: #f9faf8;
+    font-size: 24px;
+}
+
+ul {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+.First {
+    display: flex;
+    background-color: #1f2937;
+}
+
+.First h1, .First p {
+    color: #f9faf8;
+}
+
+.First h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.First p, header a {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+button {
+    background-color: #3882f6;
+    color: #f9faf8;
+    border-radius: 10px;
+}
+
+.imgPlaceholder {
+    background-color: #6d747d;
+    color: #e5e7eb;
+}
+
+.Second h2 {
+    color: #1f2937;
+}
+
+.imgsAndTxts {
+    display: flex;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border: #3882f6 2px solid;
+    border-radius: 10px;
+}
+
+.Third {
+    background-color: #e5e7eb;
+}
+
+.Third h2 {
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.Third p {
+    font-weight: 900;
+}
+
+.blueBox {
+    display: flex;
+    background-color: #3882f6;
+}
+
+.FthText p {
+    color: #e5e7eb;
+}
+
+.Fourth button {
+    border: #f9faf8 1px solid;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+}
