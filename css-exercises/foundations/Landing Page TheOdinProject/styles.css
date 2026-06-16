@@ -1,19 +1,37 @@
 @import url(/Files/Roboto-Regular.ttf);
 
-body {
-    font-family: 'Roboto-Regular', sans-serif;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-header, ul, .First, .imgsAndTxts, .blueBox {
+body {
+    font-family: 'Roboto-Regular', sans-serif;
+    flex-direction: column;
+}
+
+body, header, ul, .First, .imgPlaceholder, .Second, 
+.imgsAndTxts, .Third, .blueBox, footer {
     display: flex;
 }
 
 header {
     background-color: #1f2937;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 300px;
 }
 
 header p {
     font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0px 15px;
 }
 
 a {
@@ -22,6 +40,8 @@ a {
 
 .First {
     background-color: #1f2937;
+    justify-content: space-between;
+    padding: 100px 300px;
 }
 
 .First h1 {
@@ -33,32 +53,59 @@ a {
     font-size: 18px;
 }
 
+.FstText h1, .FstText p {
+    margin: 5px 0px;
+}
+
+.FstText {
+    max-width: 500px;
+}
+
 button {
     background-color: #3882f6;
-    border-radius: 10px;
+    border-radius: 7px;
+    padding: 5px 20px;
+
 }
 
 .imgPlaceholder {
     background-color: #6d747d;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Second {
+    flex-direction: column;
+    align-items: center;
 }
 
 .Second h2 {
     color: #1f2937;
+    margin: 50px 0px;
 }
 
-.imgsAndTxts {
-    display: flex;
+.imgAndTxt {
+    width: 150px;
+    margin: 0px 25px 80px;
+}
+
+.imgAndTxt p {
+    text-align: center;
 }
 
 .img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: #3882f6 2px solid;
     border-radius: 10px;
 }
 
 .Third {
     background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 400px 80px;
 }
 
 .Third h2 {
@@ -69,25 +116,49 @@ button {
 
 .Third p {
     font-weight: 900;
+    margin: 0px 40px;
+    align-self: flex-end;
+}
+
+.Fourth {
+    padding: 100px 300px;
 }
 
 .blueBox {
     background-color: #3882f6;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0px 80px;
 }
 
-.Fourth button {
-    border: #f9faf8 1px solid;
-    border-radius: 10px;
+#action {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.blueBox button {
+    border: #f9faf8 2px solid;
+    border-radius: 7px;
 }
 
 footer {
     background-color: #1f2937;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
 }
 
 header p, .First h1, .First p, button {
     color: #f9faf8;
 }
 
-.First p, header a, .imgPlaceholder, footer{
+.First p, header a, .imgPlaceholder, .FthText p, footer {
     color: #e5e7eb;
+}
+
+header, header p, ul, .First, .Second, .Third, .Third h2, 
+.Fourth, .FthText p, footer {
+    margin: 0px;
 }
