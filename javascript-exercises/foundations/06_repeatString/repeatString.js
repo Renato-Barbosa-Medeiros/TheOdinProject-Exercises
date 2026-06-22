@@ -1,4 +1,4 @@
-const repeatString = function(string, num) {
+const repeatString = function(word, num) {
     if (num < 0) {
         return "ERROR";
     } 
