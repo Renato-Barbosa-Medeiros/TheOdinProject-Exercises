@@ -1,3 +1,6 @@
+playerScoreEL = document.getElementById("player-score-el")
+computerScoreEL = document.getElementById("computer-score-el")
+resultsDisplayEL = document.getElementById("results-display-el")
 
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
@@ -15,20 +18,13 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper or Scissors?");
-    console.log("Your choice: " + humanChoice);
-    return humanChoice;
-}
-
-
-function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    let humanChoice = ""
 
-    for (let i = 0; i < 5; i++) {
-        function playRound(humanChoice, computerChoice) {
+        function playRound(humanChoice) {
             humanChoice = humanChoice.toLowerCase(); 
+            computerChoice = getComputerChoice();
             let result = "";
             if (computerChoice == "Rock") {
                 switch (humanChoice) {
@@ -37,8 +33,7 @@ function playGame() {
                         break;
                     case "paper":
                         result = "You win! Paper beats Rock!";
-                        humanScore += 1;
-                        break;
+                        humanScore += 1;                            break;
                     case "scissors":
                         result = "You lose! Rock beats Scissors!";
                         computerScore += 1;
@@ -76,24 +71,20 @@ function playGame() {
                     default: result = "Invalid choice";
                 }
             }
+            
+            if (humanScore === 5) {
+                result = "The Player wins the game!";
+                humanScore = 0;
+                computerScore= 0;
+            } else if (computerScore === 5) {
+                result = "The Computer wins the game!";
+                humanScore = 0;
+                computerScore= 0;
+            }
+            resultsDisplayEL.innerText = result
+            playerScoreEL.innerText = humanScore
+            computerScoreEL.innerText = computerScore
             console.log("Computer's choice: " + computerChoice)
-            console.log(result)
             console.log("Human Score: " + humanScore + " / Computer Score: " + computerScore)
         }
         
-
-        computerSelection = getComputerChoice();
-        humanSelection = getHumanChoice();
-        playRound(humanSelection, computerSelection);
-    }
-    if (humanScore > computerScore) {
-        console.log("You win the game!");
-    } else if (humanScore < computerScore) {
-        console.log("You lose the game!");
-    } else {
-        console.log("It's a Tie!")
-    }
-}
-
-playGame();
-
